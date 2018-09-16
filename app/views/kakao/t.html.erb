@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
+  <title>KakaoLink v2 Demo(Link Callback) - Kakao JavaScript SDK</title>
+  <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+</head>
+<body>
+<script type='text/javascript'>
+    //<![CDATA[
+    // 사용할 앱의 JavaScript 키를 설정해 주세요.
+    Kakao.init('a43d789cdb832999d2ff635e88e7c54c');
+    // 링크가 전송되면 앱의 링크 콜백이 설정된 URL 및 메소드로 콜백이 전송됩니다.
+    Kakao.Link.sendDefault({
+        objectType: 'text',
+        text: '간단한 JavaScript SDK 샘플과 함께 카카오 플랫폼 서비스 개발을 시작해 보세요.',
+        link: {
+            mobileWebUrl: 'http://kakao-callback-dev.ap-northeast-2.elasticbeanstalk.com/kakao/index',
+            webUrl: 'http://kakao-callback-dev.ap-northeast-2.elasticbeanstalk.com/kakao/index'
+        },
+        serverCallbackArgs: '{"key":"value"}' // 콜백 파라미터 설정
+    });
+    //]]>
+</script>
+
+</body>
+</html>
