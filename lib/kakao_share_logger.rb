@@ -16,7 +16,8 @@ class KakaoShareLogger
   end
 
   def log(json_log)
-    @logger.info json_log
+    log = JSON.parse json_log.to_json
+    @logger.info log
   rescue => e
     puts("error => #{e}")
   end
