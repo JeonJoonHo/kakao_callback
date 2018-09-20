@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   namespace :api do
     scope :module => 'users' do
       controller :kakao do
-        post '/share/callback_kakao' => :callback_kakao
+        post '/share/callback_kakao' => :callback
       end
     end
   end
