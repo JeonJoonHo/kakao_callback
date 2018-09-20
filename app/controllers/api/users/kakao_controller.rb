@@ -1,4 +1,4 @@
-class KakaoController < ApplicationController
+class Api::Users::KakaoController < ApplicationController
   def callback
     # 채팅 종류 : MemoChat, DirectChat, MultiChat
     chat_type = params[:CHAT_TYPE]
