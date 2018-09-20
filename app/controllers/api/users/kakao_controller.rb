@@ -1,4 +1,6 @@
 class Api::Users::KakaoController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def callback
     # 채팅 종류 : MemoChat, DirectChat, MultiChat
     chat_type = params[:CHAT_TYPE]
